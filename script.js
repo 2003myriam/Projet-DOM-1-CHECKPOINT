@@ -3,9 +3,11 @@ console.log(quantité[0].innerText)
 let btnplus=document.getElementsByClassName("fa-plus-circle")
 let btnmoins=document.getElementsByClassName("fa-minus-circle")
 /* _____step 2_________ */
-let supprimer=document.getElementsByClassName("fa-trash-alt")
+let btnsupprimer=document.getElementsByClassName("fa-trash-alt")
 let produit=document.getElementsByClassName("card-body")
 
+/* ____step 3________ */
+let  btncœur=document.getElementsByClassName("fa-heart")
 
 
 for (let i = 0; i < quantité.length; i++) {
@@ -29,10 +31,16 @@ for (let i = 0; i < quantité.length; i++) {
 function delet() {
   produit[i].remove()
 }
-supprimer[i].addEventListener("click",function(){
+btnsupprimer[i].addEventListener("click",function(){
   delet()
 })
-
+/* ____step 3________ */
+function like() {
+  btncœur[i].style.color="red";
+}
+btncœur[i].addEventListener("click",function(){
+  like()
+})
 }
 
 
