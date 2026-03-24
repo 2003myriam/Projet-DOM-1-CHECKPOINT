@@ -2,6 +2,10 @@ let quantité=document.getElementsByClassName("quantity")
 console.log(quantité[0].innerText)
 let btnplus=document.getElementsByClassName("fa-plus-circle")
 let btnmoins=document.getElementsByClassName("fa-minus-circle")
+/* _____step 2_________ */
+let supprimer=document.getElementsByClassName("fa-trash-alt")
+let produit=document.getElementsByClassName("card-body")
+
 
 
 for (let i = 0; i < quantité.length; i++) {
@@ -21,6 +25,14 @@ for (let i = 0; i < quantité.length; i++) {
  btnmoins[i].addEventListener("click",function(){
   moins()
 })
+/* __step 2_____ */
+function delet() {
+  produit[i].remove()
+}
+supprimer[i].addEventListener("click",function(){
+  delet()
+})
+
 }
 
 
